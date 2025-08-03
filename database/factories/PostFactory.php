@@ -20,6 +20,7 @@ class PostFactory extends Factory
         return [
             'title' => Str::title($this->faker->words(asText: true)),
             'content' => $this->faker->paragraphs(asText: true),
+            'created_at' => $this->faker->dateTimeBetween('-9 months', '-10 days'),
         ];
     }
 }
