@@ -6,3 +6,4 @@
 4. Set your Typesense server URL and API key in the `.env` file.
 5. `php artisan key:generate`
 6. `php artisan migrate --seed`
+7. `php artisan scout:import "App\Models\Post"`
