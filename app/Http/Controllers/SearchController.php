@@ -21,7 +21,7 @@ class SearchController extends Controller
                 $query->whereNotIn('id', explode(',', $request->input('exclude')));
             })
             ->when($request->input('not_title'), function (Builder $query, string $title) {
-                $query->where('title', ['!=', $title]);
+                $query->where('title', ['!', $title]);
             })
             ->get();
 
